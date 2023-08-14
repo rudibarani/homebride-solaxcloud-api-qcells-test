@@ -1,0 +1,39 @@
+name: Publish Package to npmjs
+on:
+  workflow_dispatch:
+    inputs:
+      release-type:
+        description: 'Release type (one of): patch, minor, major, prepatch, preminor, premajor, prerelease'
+        required: true
+        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+   
+    permissions:
+     contents: read
+     id-token: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+         node-version: '18.x'
+         registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint the project
+        run: npm run lint
+
+      - name: Build the project
+        run: npm run build
+        env:
+          CI: true
+
+      - run: npm install -g npm
+      - run: npm ci
+      - run: npm publish --provenance --access public
+        env:
+         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
