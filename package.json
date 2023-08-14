@@ -1,16 +1,16 @@
 {
   "private": false,
-  "displayName": "Homebridge Solax Cloud API",
+  "displayName": "Homebridge Q-Cells Cloud API",
   "name": "homebridge-solaxcloud-api",
-  "version": "2.2.1-beta.0",
+  "version": "2.2.1-beta.1",
   "description": "Integrates solar production info using public Solax/QCells Cloud API into Homebridge accessories.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/AllMightySauron/homebride-solaxcloud-api.git"
+    "url": "git://github.com/rudibarani/homebride-solaxcloud-api-qcells-test.git"
   },
   "bugs": {
-    "url": "https://github.com/AllMightySauron/homebride-solaxcloud-api/issues"
+    "url": "https://github.com/rudibarani/homebride-solaxcloud-api-qcells-test/issues"
   },
   "engines": {
     "node": ">=14.18.1",
