@@ -1,7 +1,7 @@
 {
   "private": false,
   "displayName": "Homebridge Q-Cells Cloud API",
-  "name": "homebridge-solaxcloud-api",
+  "name": "homebridge-solaxcloud-api-qcells",
   "version": "2.2.1-beta.1",
   "description": "Integrates solar production info using public Solax/QCells Cloud API into Homebridge accessories.",
   "license": "Apache-2.0",
